@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: lightgray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clock {
+    width: 350px;
+    height: 350px;
+    background-color: black;
+    border-radius: 50%;
+    background-image: url(clock.png.png);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clock::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    color: black;
+    background-color: black;
+    z-index: 10;
+  }
+  .clock .sec {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    z-index: 9;
+  }
+  .sec::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    width: 2px;
+    height: 140px;
+    border-radius: 16px 16px 0 0;
+  }
+  .clock .min {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 8;
+  }
+  .min::before {
+    content: "";
+    width: 4px;
+    height: 130px;
+    background-color: brown;
+    border-radius: 26px 26px 56px 56px;
+  }
+  .clock .hour {
+    width: 170px;
+    height: 170px;
+  
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 7;
+  }
+  .hour::before {
+    content: "";
+    width: 6px;
+    height: 105px;
+    background-color: brown;
+    border-radius: 26px 26px 56px 56px;
+  }
+  
